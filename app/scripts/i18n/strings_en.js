@@ -8,7 +8,11 @@ class Resources {
         this.resources.set('GreetMsg', 'Hello World!');  
         this.resources.set('CountLabel', 'Current Count Value : ');  
         this.resources.set('IncreaseMsg', 'Increase');  
-        this.resources.set('DecreaseMsg', 'Decrease');        
+        this.resources.set('DecreaseMsg', 'Decrease');
+        this.resources.set('SyncSummaryLabel', 'Sync Summary');
+        this.resources.set('LastSyncLabel', 'Last synced at');
+        this.resources.set('BeginSyncLabel', 'Begin Sync');
+        //this.resources.set('DecreaseMsg', 'Decrease');
     }
    
     getString(key) {

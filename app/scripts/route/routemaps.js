@@ -1,6 +1,7 @@
 const appRouteMap = {
 	routes: {
-		'': 'render'
+		'': 'render',
+		'sync': 'rendersync'
 	   //// more routes will be added later.
 	}
 };
