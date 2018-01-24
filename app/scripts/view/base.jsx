@@ -12,7 +12,14 @@ export default class Base extends React.Component {
         super(props);
         this.modelsforchange = [];
         this.modelstofetch = [];
+        this.elementsToBind = [];
         this.aggregatedModelsForChange = [];
+    }
+
+    registerForBind(element, selector) {
+        if (selector) {
+            this.elementsToBind.push({element: element, selector: selector});
+        }
     }
 
     registerForChange(model) {
@@ -77,10 +84,24 @@ export default class Base extends React.Component {
         }
     }
 
+    initializeElements() {
+         if (this.elementsToBind && this.elementsToBind.length > 0) {
+            for (let item of this.elementsToBind) {
+                if (item && item.selector) {
+                    item.element($(item.selector));
+                }
+            }
+         }
+    }
+
     componentDidMount() {
         this.bindmodelsForChange();
         this.bindaggModelsForChange();
         this.fetchmodels();
+    }
+
+    componentDidUpdate () {
+       this.initializeElements();
     }
     
     render() {

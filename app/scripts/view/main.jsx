@@ -12,22 +12,13 @@ import Drive from 'view/drive';
 export default class Main extends Base {
 
 	constructor(options) {
-        super(options);
-		/*
-		this.state = { countModel: count };
-		this.registerForChange(this.state.countModel);
-		this.registerForFetch(this.state.countModel);
-		*/
-    }
-
-   
+        super(options);		
+    }   
 
     render() {
-		debugger;
 		let content = this.props.stateManager.get("mode") == mode.sync ? <SyncSummary />: <Drive />;
         return (
         	<div className="main">
-	           <Header />
 				{ content }
 	           <Footer />
 			</div>

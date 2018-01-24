@@ -2,7 +2,8 @@
 @import "variables.less";
 
 body {
-	background-color: azure;
+	// background-color: #eef;
+    background-color: #202731;
 }
 
 .main {
@@ -10,5 +11,48 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	height:100%;
-	padding: 80px;
+	padding: 10px;
+}
+
+.thumbCont {  
+   min-width: 100px;
+   min-height: 100px;
+   padding: 1px;
+   border-radius: 5px;	
+   border: 1px solid #aaa;
+   box-shadow: 2px 2px 1px #444;
+   background: #eef;
+   font-family: Verdana Tahoma Arial;
+   font-size: 11px;
+   margin: 15px 15px;
+   display: inline-block;
+}
+
+.thumbContainer {
+    display: inline-block;
+}
+
+.photoFileInfo {
+   font: verdana normal 6px;
+   display: table;
+}
+
+.videoFileInfo {
+   font: verdana normal 6px;
+   display: table;
+}
+
+.thumbCont img {
+   cursor: pointer;
+}
+
+.driveContainer {   
+   display: table;   
+   margin-bottom: 50px;
+   margin-top: 0px;
+   border: 1px solid #aaa;
+   padding-top: 10px;   
+   padding-bottom: 10px;
+   // padding-right: 10px;
+   // padding-left: 10px;
 }

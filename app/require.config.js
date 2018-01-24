@@ -29,9 +29,21 @@ requirejs.config({
     }
 });
 
+require(["route/application"], function(app) {    
+   var handle = setInterval(start, 500);
+    function start() {
+        if (app && app.default) {
+            clearInterval(handle);
+            app.default.start();
+        }        
+    }    
+});
+
+/*
 require(["domReady", "route/application"], function(domReady, app) {
     domReady(function () {
      app.default.start();
   });
 });
+*/
 
