@@ -9,7 +9,7 @@ class FileList extends Base {
     
 
     get url() {
-        return 'https://cfunc.azurewebsites.net/api/list?code=1fPMnpFSGVCX3qMGVa4KsBrXYWvIdEuKIj0pjxi8ON9BX5bfY0zeRA=='; 
+        
         //return 'http://localhost:7071/api/list'; 
     }
 
