@@ -29,15 +29,17 @@ requirejs.config({
     }
 });
 
-require(["route/application"], function(app) {    
-   var handle = setInterval(start, 500);
-    function start() {
+var handle = setTimeout(start, 500);
+function start() {
+    require(["route/application"], function(app) {    
         if (app && app.default) {
             clearInterval(handle);
             app.default.start();
-        }        
-    }    
-});
+        } else {
+            handle = setTimeout(start, 500);
+        }  
+    });     
+} 
 
 /*
 require(["domReady", "route/application"], function(domReady, app) {
