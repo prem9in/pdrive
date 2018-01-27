@@ -1,3 +1,9 @@
+/*
+* Dropping the idea of infinite scroll. This requires some dedicated time.
+* For now, I will go with paging solution. This is quick to get it working.
+*/
+
+
 import _ from 'underscore';
 import React from 'react';
 import Base from 'view/base';
