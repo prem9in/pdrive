@@ -12,7 +12,10 @@ class Resources {
         this.resources.set('SyncSummaryLabel', 'Sync Summary');
         this.resources.set('LastSyncLabel', 'Last synced at');
         this.resources.set('BeginSyncLabel', 'Begin Sync');
-        //this.resources.set('DecreaseMsg', 'Decrease');
+        this.resources.set('DecreaseMsg', 'Decrease');
+        this.resources.set('PreviousMsg', ' < Previous Page ');
+        this.resources.set('NextMsg', ' Next Page > ');
+       
     }
    
     getString(key) {

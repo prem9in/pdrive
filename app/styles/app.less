@@ -12,6 +12,9 @@ body {
 	margin-right: auto;
 	height:100%;
 	padding: 10px;
+   color: #eee;
+   font-family: Verdana Tahoma Arial;
+   font-size: 12px;
 }
 
 .thumbCont {  
@@ -49,10 +52,52 @@ body {
 .driveContainer {   
    display: table;   
    margin-bottom: 50px;
-   margin-top: 0px;
-   border: 1px solid #aaa;
+   margin-top: 0px;  
    padding-top: 10px;   
-   padding-bottom: 10px;
-   // padding-right: 10px;
-   // padding-left: 10px;
+   padding-bottom: 10px;   
+}
+
+.currentPage {
+   width: 40%;
+   display: inline-block;
+   text-align: center;
+   color: #308850;
+}
+
+.previous {
+   width: 25%;
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid #aaa;
+   box-shadow: 2px 2px 1px #444;
+   display: inline-block;
+   cursor: pointer;
+   background-color: #308850;
+   text-align: center;
+}
+
+.next {
+   width: 25%; 
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid #aaa;
+   box-shadow: 2px 2px 1px #444;
+   display: inline-block;
+   cursor: pointer;
+   background-color: #308850;
+   text-align: center;
+}
+
+.emptyPrevious {
+    width: 25%;
+    display: inline-block;;
+}
+
+.emptyNext {
+   width: 25%;
+   display: inline-block;;
+}
+
+.pagingControls {
+   margin: 10px 20px;
 }
