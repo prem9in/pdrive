@@ -108,7 +108,6 @@ export default class Drive extends Base {
         }    	
     }
 
-
     scrollContent(event) {  
         let stop = this.elements.document.scrollTop();
         let dheight = this.elements.document.height();
@@ -142,6 +141,9 @@ export default class Drive extends Base {
         } else {                
             this.state.files = _files;
         }   
+
+        let tcount = this.model.get("TotalCount"); 
+        this.state.totalPage = Math.ceil(tcount / this.state.pageSize);
     }
 
     getPageData() {
@@ -168,6 +170,7 @@ export default class Drive extends Base {
 
     getData() {
         if (this.dataAvailable()) {
+           this.model.set({initialized: true}, {silent: true});   
            this.setState({ render: true });
         } else {            
             let skip = (this.state.pageNum * this.state.pageSize);

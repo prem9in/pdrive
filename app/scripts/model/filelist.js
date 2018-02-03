@@ -22,6 +22,7 @@ class FileList extends Base {
             "DriveToken": "",
             "ThumbToken": "",
             "initialized": false,
+            "TotalCount": 0
         }
     }   
 
