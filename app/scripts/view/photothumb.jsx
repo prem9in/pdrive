@@ -21,7 +21,7 @@ export default class PhotoThumb extends Base {
     	if (photoInfo) {
     			return (<div className="thumbContainer">
 	    					<div className="thumbCont">
-	               				<img src={url}></img>
+	               				<img src={url} onClick={this.handleShowFile.bind(this)}></img>
 	               			</div>
                             {/* 
                             <div className="photoFileInfo">
@@ -37,10 +37,14 @@ export default class PhotoThumb extends Base {
 			return (
                 <div className="thumbContainer">
                 <div className="thumbCont">
-               			<img src={url}></img>               			
+               			<img src={url} onClick={this.handleShowFile.bind(this)}></img>               			
                		</div>
                 </div>);
     	}
     	
+    }
+
+    handleShowFile() {
+        this.props.showHandler(this.props.file);
     }
 }

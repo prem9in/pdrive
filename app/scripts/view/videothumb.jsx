@@ -21,7 +21,7 @@ export default class VideoThumb extends Base {
     	if (videoInfo) {
     			return (<div className="thumbContainer">
 	    					<div className="thumbCont">
-	               				<img src={url}></img>
+	               				<img src={url} onClick={this.handleShowFile.bind(this)}></img>
 	               			</div>
                             {/* 
                             <div className="videoFileInfo">
@@ -36,10 +36,14 @@ export default class VideoThumb extends Base {
 			return (
                 <div className="thumbContainer">
                 <div className="thumbCont">
-               			<img src={url}></img>               			
+               			<img src={url} onClick={this.handleShowFile.bind(this)}></img>               			
                		</div>
             </div>);
     	}
     	
+    }
+
+    handleShowFile(fileData) {
+        this.props.showHandler(this.props.file);
     }
 }
