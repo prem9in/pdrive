@@ -109,5 +109,38 @@ body {
    background-size: contain;
    background-origin: padding-box;
    image-orientation: 0deg;
+   position: relative;
+}
+
+.fullPhotoImage {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.rotate0 {
+   -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.rotate90 {
+   -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+   -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rotate270 {
+   -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.controls {
+   display: inline-block;
+   cursor: pointer;
+   
 }
 
